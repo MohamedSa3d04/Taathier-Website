@@ -1,0 +1,342 @@
+/* ==========================================================================
+   Case Studies — listing & detail pages
+   ========================================================================== */
+
+/* ===================== Listing ===================== */
+
+.cs-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  padding: 44px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.cs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cs-card {
+  background: var(--teal-mid);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 162, 76, 0.45);
+}
+
+.cs-card-thumb {
+  position: relative;
+  background: var(--cream);
+  padding: 12px;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.cs-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: calc(var(--radius) - 4px);
+}
+
+.cs-card-badges {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cs-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  background: rgba(8, 42, 37, 0.88);
+  color: var(--cream-text);
+  backdrop-filter: blur(6px);
+}
+
+.cs-badge--platform { color: var(--gold); }
+
+.cs-card-body {
+  padding: 26px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 14px;
+}
+
+.cs-card-body h2 {
+  font-size: 1.15rem;
+  line-height: 1.45;
+}
+
+.cs-card-body p {
+  font-size: 0.92rem;
+  opacity: 0.72;
+  flex: 1;
+}
+
+.cs-card-metric {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(212, 162, 76, 0.14);
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.cs-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-top: 4px;
+}
+
+.cs-card-link:hover { color: var(--cream-text); }
+
+/* ===================== Detail ===================== */
+
+.cs-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  opacity: 0.65;
+  margin-bottom: 22px;
+}
+
+.cs-breadcrumb a:hover { color: var(--gold); }
+
+.cs-breadcrumb span { opacity: 0.5; }
+
+.cs-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.cs-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 48px;
+  align-items: start;
+}
+
+.cs-screenshot-wrap {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  margin-bottom: 36px;
+}
+
+.cs-screenshot-wrap img,
+.cs-screenshot-btn {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: calc(var(--radius-lg) - 8px);
+  cursor: zoom-in;
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+.cs-screenshot-caption {
+  margin-top: 12px;
+  font-size: 0.82rem;
+  opacity: 0.55;
+  text-align: center;
+}
+
+.cs-content-block {
+  margin-bottom: 36px;
+}
+
+.cs-content-block h2 {
+  font-size: 1.45rem;
+  margin-bottom: 14px;
+}
+
+.cs-content-block p {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 14px;
+  max-width: 680px;
+}
+
+.cs-sidebar {
+  position: sticky;
+  top: 98px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cs-sidebar-card {
+  background: var(--teal-mid);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 22px;
+}
+
+.cs-sidebar-card h3 {
+  font-size: 1rem;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.cs-fact {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+
+.cs-fact:last-child { border-bottom: none; }
+
+.cs-fact span { opacity: 0.65; }
+
+.cs-fact strong {
+  text-align: left;
+  direction: ltr;
+}
+
+.cs-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.cs-metric-box {
+  background: var(--teal-mid);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 18px;
+  text-align: center;
+}
+
+.cs-metric-box .value {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.7rem;
+  color: var(--gold);
+  margin-bottom: 6px;
+  direction: ltr;
+}
+
+.cs-metric-box .label {
+  font-size: 0.82rem;
+  opacity: 0.68;
+}
+
+.cs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cs-list li {
+  position: relative;
+  padding-right: 22px;
+  font-size: 0.96rem;
+  opacity: 0.85;
+}
+
+.cs-list li::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+/* ===================== Lightbox ===================== */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(8, 42, 37, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox img {
+  max-width: min(1100px, 100%);
+  max-height: 90vh;
+  border-radius: var(--radius);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--teal-mid);
+  color: var(--cream-text);
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-close:hover { border-color: var(--gold); color: var(--gold); }
+
+@media (max-width: 980px) {
+  .cs-hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .cs-grid { grid-template-columns: 1fr; }
+  .cs-detail-layout { grid-template-columns: 1fr; }
+  .cs-sidebar { position: static; }
+  .cs-metrics-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .cs-hero-stats { grid-template-columns: 1fr; }
+  .cs-metrics-grid { grid-template-columns: 1fr; }
+}
