@@ -1,0 +1,28 @@
+<svg viewBox="0 0 1180 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0B3D36"/>
+      <stop offset="100%" stop-color="#114A41"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1180" height="200" rx="22" fill="url(#bandGrad)"/>
+
+  <!-- dotted diamond pattern, right side -->
+  <g fill="#D4A24C" fill-opacity="0.5">
+    <path d="M980 40 L992 52 L980 64 L968 52 Z"/>
+    <path d="M1010 40 L1022 52 L1010 64 L998 52 Z"/>
+    <path d="M1040 40 L1052 52 L1040 64 L1028 52 Z"/>
+    <path d="M995 70 L1007 82 L995 94 L983 82 Z"/>
+    <path d="M1025 70 L1037 82 L1025 94 L1013 82 Z"/>
+  </g>
+
+  <!-- soft concentric arcs, left -->
+  <circle cx="90" cy="100" r="140" fill="none" stroke="#D4A24C" stroke-opacity="0.12" stroke-width="1.5"/>
+  <circle cx="90" cy="100" r="100" fill="none" stroke="#D4A24C" stroke-opacity="0.16" stroke-width="1.5"/>
+
+  <!-- brand mark, large, faded, bottom right -->
+  <g transform="translate(1060, 110) scale(0.9)" opacity="0.18">
+    <path d="M0 92 C0 100 6 106 16 106 L140 106 C150 106 154 114 154 122 L154 92 C154 100 150 92 140 92 Z" fill="#F0E6D8"/>
+  </g>
+</svg>

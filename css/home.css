@@ -1,0 +1,239 @@
+/* ==========================================================================
+   Homepage
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  padding: 90px 0 100px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -20% -10% auto auto;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(212,162,76,0.16) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 56px;
+  align-items: center;
+  position: relative;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.3rem, 4.2vw, 3.4rem);
+  margin-bottom: 22px;
+}
+
+.hero-copy h1 .accent { color: var(--gold); }
+
+.hero-sub {
+  font-size: 1.1rem;
+  opacity: 0.82;
+  max-width: 540px;
+  margin-bottom: 34px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.hero-trust {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.hero-trust strong {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--gold);
+}
+
+.hero-trust span {
+  font-size: 0.92rem;
+  opacity: 0.7;
+  max-width: 220px;
+}
+
+.hero-visual {
+  position: relative;
+}
+
+.hero-visual img {
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.4);
+}
+
+/* ===================== Stats Strip ===================== */
+
+.stats-strip {
+  background: var(--teal-mid);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 44px 0;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+  border-left: 1px solid var(--line);
+}
+
+.stat:last-child { border-left: none; }
+
+.stat-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.1rem;
+  color: var(--gold);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  opacity: 0.72;
+  padding: 0 12px;
+}
+
+/* ===================== Services ===================== */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.service-card {
+  background: var(--teal-mid);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px 26px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+}
+
+.service-icon {
+  font-size: 1.8rem;
+  margin-bottom: 18px;
+}
+
+.service-card h3 {
+  font-size: 1.08rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.92rem;
+  opacity: 0.72;
+}
+
+/* ===================== Why Us ===================== */
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--teal-mid);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+}
+
+.why-check {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(212,162,76,0.18);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.why-item p { font-size: 0.97rem; opacity: 0.88; }
+
+/* ===================== CTA Band ===================== */
+
+.cta-band {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dim) 100%);
+  border-radius: var(--radius-lg);
+  margin: 0 28px;
+  max-width: calc(var(--max-w) - 56px);
+  margin-inline: auto;
+}
+
+.cta-band-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 56px 50px;
+  flex-wrap: wrap;
+}
+
+.cta-band-inner h2 {
+  color: var(--teal-black);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 8px;
+}
+
+.cta-band-inner p {
+  color: var(--teal-black);
+  opacity: 0.75;
+  font-size: 1rem;
+}
+
+.cta-band .btn-primary {
+  background: var(--teal-black);
+  color: var(--cream-text);
+  flex-shrink: 0;
+}
+.cta-band .btn-primary:hover {
+  background: var(--teal-deep);
+  box-shadow: 0 12px 28px rgba(8,42,37,0.3);
+}
+
+@media (max-width: 980px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-visual { order: -1; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat:nth-child(2) { border-left: none; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: 1fr; }
+  .cta-band-inner { flex-direction: column; text-align: center; padding: 44px 28px; }
+}
+
+@media (max-width: 560px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}

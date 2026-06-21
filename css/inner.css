@@ -1,0 +1,251 @@
+/* ==========================================================================
+   Inner pages — shared components (Services, About, Contact)
+   ========================================================================== */
+
+.page-hero {
+  padding: 80px 0 70px;
+  border-bottom: 1px solid var(--line);
+}
+
+.page-hero h1 {
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  margin-bottom: 18px;
+  max-width: 780px;
+}
+
+.page-hero p {
+  font-size: 1.05rem;
+  opacity: 0.78;
+  max-width: 600px;
+}
+
+/* ===================== Service Detail Blocks ===================== */
+
+.service-detail {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 36px;
+  padding: 48px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.service-detail:first-child { padding-top: 0; }
+.service-detail:last-child { border-bottom: none; }
+
+.service-detail-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.6rem;
+  color: var(--gold);
+  opacity: 0.5;
+}
+
+.service-detail-body h2 {
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+}
+
+.service-detail-body > p {
+  font-size: 1rem;
+  opacity: 0.78;
+  max-width: 620px;
+  margin-bottom: 20px;
+}
+
+.detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-list li {
+  position: relative;
+  padding-right: 24px;
+  font-size: 0.96rem;
+  opacity: 0.85;
+}
+
+.detail-list li::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+/* ===================== Process Steps ===================== */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.process-step {
+  background: var(--teal-mid);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px 24px;
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--teal-black);
+  font-weight: 800;
+  font-family: var(--font-display);
+  margin-bottom: 18px;
+}
+
+.process-step h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.process-step p { font-size: 0.9rem; opacity: 0.72; }
+
+/* ===================== About: Story ===================== */
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.story-copy h2 { font-size: 2rem; margin-bottom: 22px; }
+.story-copy p {
+  font-size: 1.02rem;
+  opacity: 0.8;
+  margin-bottom: 18px;
+}
+
+.story-visual {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  overflow: hidden;
+}
+
+.story-visual img { width: 100%; height: auto; display: block; border-radius: calc(var(--radius-lg) - 8px); }
+
+/* ===================== About: Values ===================== */
+
+.values-section { background: var(--teal-mid); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.value-card {
+  background: var(--teal-deep);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 22px;
+}
+
+.value-card h3 { font-size: 1rem; margin-bottom: 10px; }
+.value-card p { font-size: 0.9rem; opacity: 0.72; }
+
+/* ===================== Contact ===================== */
+
+.contact-hero {
+  padding: 100px 0;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  inset: -30% 35% auto auto;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(212,162,76,0.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.contact-hero-inner {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.contact-hero-inner .eyebrow { justify-content: center; }
+
+.contact-hero-inner h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 16px;
+}
+
+.contact-hero-inner p {
+  font-size: 1.05rem;
+  opacity: 0.78;
+  margin-bottom: 36px;
+}
+
+.btn-large {
+  padding: 19px 38px;
+  font-size: 1.05rem;
+}
+
+.contact-number {
+  display: block;
+  margin-top: 18px;
+  font-size: 0.95rem;
+  opacity: 0.6;
+  direction: ltr;
+}
+
+.social-section { text-align: center; }
+.social-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+.social-inner h2 { font-size: 1.6rem; }
+
+/* ===================== Values banner image ===================== */
+
+.values-banner {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  margin-bottom: 48px;
+}
+
+/* ===================== CTA as inner section (About page pattern) ===================== */
+
+.cta-section {
+  padding-top: 0;
+}
+
+.cta-section .cta-band {
+  margin: 0;
+  max-width: none;
+}
+
+@media (max-width: 880px) {
+  .service-detail { grid-template-columns: 1fr; gap: 14px; }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .story-grid { grid-template-columns: 1fr; }
+  .story-visual { order: -1; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .process-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: 1fr; }
+}
