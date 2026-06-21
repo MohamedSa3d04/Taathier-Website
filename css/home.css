@@ -134,8 +134,21 @@
 }
 
 .service-icon {
-  font-size: 1.8rem;
+  width: 52px;
+  height: 52px;
   margin-bottom: 18px;
+  border-radius: 14px;
+  background: rgba(212,162,76,0.14);
+  border: 1px solid rgba(212,162,76,0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+}
+
+.service-icon svg {
+  width: 26px;
+  height: 26px;
 }
 
 .service-card h3 {
@@ -181,6 +194,77 @@
 }
 
 .why-item p { font-size: 0.97rem; opacity: 0.88; }
+
+/* ===================== Testimonials ===================== */
+
+.testimonials-section {
+  background: var(--teal-mid);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.testimonial-card {
+  background: var(--teal-deep);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212,162,76,0.45);
+}
+
+.testimonial-quote {
+  font-size: 0.97rem;
+  opacity: 0.88;
+  line-height: 1.8;
+}
+
+.testimonial-quote::before {
+  content: '«';
+  color: var(--gold);
+  font-size: 1.4rem;
+  margin-left: 4px;
+}
+
+.testimonial-meta {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.testimonial-meta strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.testimonial-meta span {
+  font-size: 0.82rem;
+  opacity: 0.65;
+}
+
+.testimonial-result {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(212,162,76,0.14);
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
 
 /* ===================== CTA Band ===================== */
 
@@ -230,6 +314,7 @@
   .stat:nth-child(2) { border-left: none; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
   .cta-band-inner { flex-direction: column; text-align: center; padding: 44px 28px; }
 }
 

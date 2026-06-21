@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mohamedsa3d04.github.io/Taathier-Website/sitemap.xml
